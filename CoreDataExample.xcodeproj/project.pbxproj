@@ -16,6 +16,7 @@
 		96EDFC8B29E3DABD00FB89FC /* CoreDataExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96EDFC8A29E3DABD00FB89FC /* CoreDataExampleTests.swift */; };
 		96EDFC9529E3DABD00FB89FC /* CoreDataExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96EDFC9429E3DABD00FB89FC /* CoreDataExampleUITests.swift */; };
 		96EDFC9729E3DABD00FB89FC /* CoreDataExampleUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96EDFC9629E3DABD00FB89FC /* CoreDataExampleUITestsLaunchTests.swift */; };
+		96EDFCA529E40F1600FB89FC /* GreetingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96EDFCA429E40F1600FB89FC /* GreetingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,7 @@
 		96EDFC9429E3DABD00FB89FC /* CoreDataExampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataExampleUITests.swift; sourceTree = "<group>"; };
 		96EDFC9629E3DABD00FB89FC /* CoreDataExampleUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataExampleUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		96EDFCA329E3DE5500FB89FC /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		96EDFCA429E40F1600FB89FC /* GreetingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreetingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +110,7 @@
 				96EDFC8129E3DABD00FB89FC /* Info.plist */,
 				96EDFC7E29E3DABD00FB89FC /* CoreDataExample.xcdatamodeld */,
 				96EDFC7929E3DABD00FB89FC /* Preview Content */,
+				96EDFCA429E40F1600FB89FC /* GreetingView.swift */,
 			);
 			path = CoreDataExample;
 			sourceTree = "<group>";
@@ -270,6 +273,7 @@
 				96EDFC7D29E3DABD00FB89FC /* Persistence.swift in Sources */,
 				96EDFC7629E3DABC00FB89FC /* ContentView.swift in Sources */,
 				96EDFC7429E3DABC00FB89FC /* CoreDataExampleApp.swift in Sources */,
+				96EDFCA529E40F1600FB89FC /* GreetingView.swift in Sources */,
 				96EDFC8029E3DABD00FB89FC /* CoreDataExample.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

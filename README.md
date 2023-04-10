@@ -1,11 +1,11 @@
 # Coding Styles Guide
 
 ## **Naming convention**
-1. Uppercase first letter for **public** variable and lowercase first letter for **private** variable.
+1. Uppercase first letter for **class public** variable and lowercase first letter for **class private** variable.
 2. Use `_` at the end of the variable name to **indicate** it as a class variable.
 
 ```
-public struct ContentView {
+public struct Model {
     private var names_: [String]
     public var Items_: [Int8]
 }
@@ -14,7 +14,7 @@ public struct ContentView {
 ## Initialize **class** variable in constructor
 
 ```
-public struct ContentView {
+public struct Model {
     private var names_: [String]
     public var Items_: [Int8]
     
@@ -38,9 +38,9 @@ public struct ContentView {
 3. use `let` keyword to define the variable as non-changeable.
 4. use uppercase letters for the variable name to **indicate** it as a static variable.
 
-ContentViewHelper.swift
+ModelHelper.swift
 ```
-public enum ContentViewHelper {
+public enum ModelHelper {
     public static let ITEMS: [Int8] = [0,1,2,3]
     
     public static func PrintItems() -> Void {
@@ -50,6 +50,42 @@ public enum ContentViewHelper {
     }
 }
 ```
+
+## Model, View, ViewModel Design Pattern
+1. Model is to store data. Model have class variable (the data) and method to access and manipulate the variable.
+2. View is the view:
+    1. View have class variable `public var body: some View`
+    ```
+    public struct GreetingView: View {
+        public var Greeting_: String
+        
+        public init() {
+            self.Greeting_ = "Hello world!"
+        }
+    
+        public var body: some View { 
+            Text(self.Greeting_)
+        }
+    }
+    ```
+    2. View have listener to respond to user interactions i.e. `.onTapGesture`
+    ```
+    public struct GreeetingView: View {
+        public var Greeting_: String
+        
+        public init() {
+            self.Greeting_ = "Hello world!"
+        }
+    
+        public var body: some View {
+            Text("Hello world!")
+                .onTapGesture {
+                    self.Greeting_ = self.Greeting_ == "Hello world!" ? "Hello SwiftUI!" : "Hello world!"
+                }
+        }
+    }
+    ```
+3. ViewModel (TODO)
 
 # Git Workflow Guide
 
