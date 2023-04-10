@@ -1,3 +1,5 @@
+# Coding Styles Guide
+
 ## **Naming convention**
 1. Uppercase first letter for **public** variable and lowercase first letter for **private** variable.
 2. Use `_` at the end of the variable name to **indicate** it as a class variable.
@@ -48,3 +50,36 @@ public enum ContentViewHelper {
     }
 }
 ```
+
+# Git Workflow Guide
+
+## Routine to do
+
+1. Make sure branch 'main' is up to date
+```
+$ git checkout main
+$ git pull
+```
+2. Create a new branch i.e. `feature` / `bugfix`
+```
+$ git branch feature/CameraView
+$ git checkout feature/CameraView
+```
+3. Make a commit i.e. `git commit -m "add CameraView"`
+4. Resolve conflict between branch `main` and branch `feature/CameraView`
+```
+# Make sure branch 'main' is up to date
+$ git checkout main
+$ git pull
+
+# Go back to branch feature/CameraView
+$ git checkout feature/CameraView
+$ git rebase main
+```
+5. Upload the changes to GitHub.com repository
+```
+$ git push
+```
+6. Create a PR to merge branch `feature/CameraView` to branch `main` in [the GitHub.com's repository](https://github.com/Step-Point/CoreDataExample)
+7. Ask others to review the code
+8. Let others to `Rebase and merge` the code into branch `feature/CameraView` to branch `main`.
