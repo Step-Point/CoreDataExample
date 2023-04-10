@@ -8,7 +8,7 @@
 import SwiftUI
 import CoreData
 
-struct ContentView: View {
+public struct ContentView: View {
     @Environment(\.managedObjectContext) private var viewContext
 
     @FetchRequest(
@@ -16,7 +16,7 @@ struct ContentView: View {
         animation: .default)
     private var items: FetchedResults<Item>
 
-    var body: some View {
+    public var body: some View {
         NavigationView {
             List {
                 ForEach(items) { item in
