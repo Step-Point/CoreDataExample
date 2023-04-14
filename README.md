@@ -54,6 +54,7 @@ public enum ModelHelper {
 ## Model, View, ViewModel Design Pattern
 1. View is the view:
     1. View have class variable `public var body: some View`
+    
     GreetingView.swift
     ```
     public struct GreetingView: View {
@@ -69,6 +70,7 @@ public enum ModelHelper {
     }
     ```
     2. View have listener to respond to user interactions i.e. `.onTapGesture`
+    
     GreetingView.swift
     ```diff
     public struct GreetingView: View {
@@ -87,6 +89,7 @@ public enum ModelHelper {
     }
     ```
 2. Model is to store data. Model have class variable (the data) and method to access and manipulate the variable.
+
 GreetingModel.swift
 ```
 public struct GreetingModel {
@@ -121,6 +124,7 @@ public struct GreetingView: View {
 ```
 3. ViewModel contains the business logic of the application and serves as a bridge between the View and the Model.
     1. ViewModel provides data and behavior to the View through variables and methods.
+    
     GreetingView.swift
     ```diff
     public struct GreetingView: View {
