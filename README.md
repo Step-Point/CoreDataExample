@@ -53,39 +53,92 @@ public enum ModelHelper {
 
 ## Model, View, ViewModel Design Pattern
 1. Model is to store data. Model have class variable (the data) and method to access and manipulate the variable.
+GreetingModel.swift
+```
+public struct GreetingModel {
+    public var Greeting_: String
+    
+    public init() {
+        self.Greeting_ = "Hello world!"
+    }
+}
+```
 2. View is the view:
     1. View have class variable `public var body: some View`
+    GreetingView.swift
     ```
     public struct GreetingView: View {
-        public var Greeting_: String
+        @State private var model_: GreetingModel
         
         public init() {
-            self.Greeting_ = "Hello world!"
+            self.model_ = GreetingModel()
         }
-    
-        public var body: some View { 
-            Text(self.Greeting_)
+
+        public var body: some View {
+            Text(self.model_.Greeting_)
         }
     }
     ```
     2. View have listener to respond to user interactions i.e. `.onTapGesture`
-    ```
-    public struct GreeetingView: View {
-        public var Greeting_: String
+    GreetingView.swift
+    ```diff
+    public struct GreetingView: View {
+        @State private var model_: GreetingModel
         
         public init() {
-            self.Greeting_ = "Hello world!"
+            self.model_ = GreetingModel()
         }
-    
+
         public var body: some View {
-            Text("Hello world!")
+            Text(self.model_.Greeting_)
++               .onTapGesture {
++                   self.model_.Greeting_ = self.model_.Greeting_ == "Hello world!" ? "Hello SwiftUI!" : "Hello world!"
++               }
+        }
+    }
+    ```
+3. ViewModel contains the business logic of the application and serves as a bridge between the View and the Model.
+    1. ViewModel provides data and behavior to the View through variables and methods.
+    GreetingView.swift
+    ```diff
+    public struct GreetingView: View {
+    -   public var model_: GreetingModel
+    +   @StateObject private var viewModel_: GreetingViewModel
+
+        public init() {
+    -       self.model_ = GreetingModel()
+    +       self._viewModel_ = StateObject(wrappedValue: GreetingViewModel())
+        }
+        
+        public var body: some View {
+    -       Text(self.model_.Greeting_)
+    +       Text(self.viewModel_.GetGreeting())
                 .onTapGesture {
-                    self.Greeting_ = self.Greeting_ == "Hello world!" ? "Hello SwiftUI!" : "Hello world!"
+    -               self.model_.Greeting_ = self.model_.Greeting_ == "Hello world!" ? "Hello SwiftUI!" : "Hello world!"
+    +               self.viewModel_.UpdateGreeting()
                 }
         }
     }
     ```
-3. ViewModel (TODO)
+
+    GreetingViewModel.swift
+    ```
+    public class GreetingViewModel: ObservableObject {
+        @Published private var model_: GreetingModel
+        
+        public init() {
+            self.model_ = GreetingModel()
+        }
+        
+        public func GetGreeting() -> String {
+            return self.model_.Greeting_
+        }
+        
+        public func UpdateGreeting() {
+            self.model_.Greeting_ = self.model_.Greeting_ == "Hello world!" ? "Hello SwiftUI!" : "Hello world!"
+        }
+    }
+    ```
 
 # Git Workflow Guide
 

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		96A4683129E9399A001F107D /* GreetingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A4683029E9399A001F107D /* GreetingViewModel.swift */; };
+		96A4683329E93DEB001F107D /* GreetingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A4683229E93DEB001F107D /* GreetingModel.swift */; };
 		96EDFC7429E3DABC00FB89FC /* CoreDataExampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96EDFC7329E3DABC00FB89FC /* CoreDataExampleApp.swift */; };
 		96EDFC7629E3DABC00FB89FC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96EDFC7529E3DABC00FB89FC /* ContentView.swift */; };
 		96EDFC7829E3DABD00FB89FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96EDFC7729E3DABD00FB89FC /* Assets.xcassets */; };
@@ -37,6 +39,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		96A4683029E9399A001F107D /* GreetingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreetingViewModel.swift; sourceTree = "<group>"; };
+		96A4683229E93DEB001F107D /* GreetingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreetingModel.swift; sourceTree = "<group>"; };
 		96EDFC7029E3DABC00FB89FC /* CoreDataExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreDataExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96EDFC7329E3DABC00FB89FC /* CoreDataExampleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataExampleApp.swift; sourceTree = "<group>"; };
 		96EDFC7529E3DABC00FB89FC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -50,7 +54,7 @@
 		96EDFC9029E3DABD00FB89FC /* CoreDataExampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoreDataExampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		96EDFC9429E3DABD00FB89FC /* CoreDataExampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataExampleUITests.swift; sourceTree = "<group>"; };
 		96EDFC9629E3DABD00FB89FC /* CoreDataExampleUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataExampleUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		96EDFCA329E3DE5500FB89FC /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		96EDFCA329E3DE5500FB89FC /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.markdown; };
 		96EDFCA429E40F1600FB89FC /* GreetingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreetingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -111,6 +115,8 @@
 				96EDFC7E29E3DABD00FB89FC /* CoreDataExample.xcdatamodeld */,
 				96EDFC7929E3DABD00FB89FC /* Preview Content */,
 				96EDFCA429E40F1600FB89FC /* GreetingView.swift */,
+				96A4683229E93DEB001F107D /* GreetingModel.swift */,
+				96A4683029E9399A001F107D /* GreetingViewModel.swift */,
 			);
 			path = CoreDataExample;
 			sourceTree = "<group>";
@@ -271,9 +277,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				96EDFC7D29E3DABD00FB89FC /* Persistence.swift in Sources */,
+				96A4683129E9399A001F107D /* GreetingViewModel.swift in Sources */,
 				96EDFC7629E3DABC00FB89FC /* ContentView.swift in Sources */,
 				96EDFC7429E3DABC00FB89FC /* CoreDataExampleApp.swift in Sources */,
 				96EDFCA529E40F1600FB89FC /* GreetingView.swift in Sources */,
+				96A4683329E93DEB001F107D /* GreetingModel.swift in Sources */,
 				96EDFC8029E3DABD00FB89FC /* CoreDataExample.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

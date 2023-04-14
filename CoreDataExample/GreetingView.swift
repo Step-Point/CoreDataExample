@@ -1,5 +1,5 @@
 //
-//  GreetingView.swift
+//  GreetingView.swift
 //  CoreDataExample
 //
 //  Created by Jason Rich Darmawan Onggo Putra on 10/04/23.
@@ -8,16 +8,17 @@
 import SwiftUI
 
 public struct GreetingView: View {
-    @State public var Greeting_: String
-    
-    public init() {
-        self.Greeting_ = "Hello world!"
-    }
 
+    @StateObject private var viewModel_: GreetingViewModel
+
+    public init() {
+       self._viewModel_ = StateObject(wrappedValue: GreetingViewModel())
+    }
+    
     public var body: some View {
-        Text(self.Greeting_)
+        Text(self.viewModel_.GetGreeting())
             .onTapGesture {
-                self.Greeting_ = self.Greeting_ == "Hello world!" ? "Hello SwiftUI!" : "Hello world!"
+                self.viewModel_.UpdateGreeting()
             }
     }
 }
