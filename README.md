@@ -124,6 +124,25 @@ public struct GreetingView: View {
 ```
 3. ViewModel contains the business logic of the application and serves as a bridge between the View and the Model.
     1. ViewModel provides data and behavior to the View through variables and methods.
+
+    GreetingViewModel.swift
+    ```
+    public class GreetingViewModel: ObservableObject {
+        @Published private var model_: GreetingModel
+        
+        public init() {
+            self.model_ = GreetingModel()
+        }
+        
+        public func GetGreeting() -> String {
+            return self.model_.Greeting_
+        }
+        
+        public func UpdateGreeting() {
+            self.model_.Greeting_ = self.model_.Greeting_ == "Hello world!" ? "Hello SwiftUI!" : "Hello world!"
+        }
+    }
+    ```
     
     GreetingView.swift
     ```diff
@@ -143,25 +162,6 @@ public struct GreetingView: View {
     -               self.model_.Greeting_ = self.model_.Greeting_ == "Hello world!" ? "Hello SwiftUI!" : "Hello world!"
     +               self.viewModel_.UpdateGreeting()
                 }
-        }
-    }
-    ```
-
-    GreetingViewModel.swift
-    ```
-    public class GreetingViewModel: ObservableObject {
-        @Published private var model_: GreetingModel
-        
-        public init() {
-            self.model_ = GreetingModel()
-        }
-        
-        public func GetGreeting() -> String {
-            return self.model_.Greeting_
-        }
-        
-        public func UpdateGreeting() {
-            self.model_.Greeting_ = self.model_.Greeting_ == "Hello world!" ? "Hello SwiftUI!" : "Hello world!"
         }
     }
     ```
