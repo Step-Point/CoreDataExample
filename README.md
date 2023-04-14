@@ -91,9 +91,9 @@ public struct GreetingModel {
 
         public var body: some View {
             Text(self.model_.Greeting_)
-+               .onTapGesture {
-+                   self.model_.Greeting_ = self.model_.Greeting_ == "Hello world!" ? "Hello SwiftUI!" : "Hello world!"
-+               }
+    +           .onTapGesture {
+    +               self.model_.Greeting_ = self.model_.Greeting_ == "Hello world!" ? "Hello SwiftUI!" : "Hello world!"
+    +           }
         }
     }
     ```
