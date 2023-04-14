@@ -15,8 +15,8 @@ public struct CoreDataExampleApp: App {
 
     public var body: some Scene {
         WindowGroup {
-            ContentView()
-                .environment(\.managedObjectContext, persistenceController.container.viewContext)
+            let itemsViewModel_ = ItemsViewModel(viewContext: persistenceController.container.viewContext)
+            ContentView(itemsViewModel: itemsViewModel_)
         }
     }
 }

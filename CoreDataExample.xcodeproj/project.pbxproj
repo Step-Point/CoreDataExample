@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		96A4683129E9399A001F107D /* GreetingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A4683029E9399A001F107D /* GreetingViewModel.swift */; };
 		96A4683329E93DEB001F107D /* GreetingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A4683229E93DEB001F107D /* GreetingModel.swift */; };
+		96A468AD29E9A5D3001F107D /* ItemsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A468AC29E9A5D3001F107D /* ItemsViewModel.swift */; };
+		96A468B129E9AA95001F107D /* ItemsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A468B029E9AA95001F107D /* ItemsHelper.swift */; };
 		96EDFC7429E3DABC00FB89FC /* CoreDataExampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96EDFC7329E3DABC00FB89FC /* CoreDataExampleApp.swift */; };
 		96EDFC7629E3DABC00FB89FC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96EDFC7529E3DABC00FB89FC /* ContentView.swift */; };
 		96EDFC7829E3DABD00FB89FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96EDFC7729E3DABD00FB89FC /* Assets.xcassets */; };
@@ -41,6 +43,8 @@
 /* Begin PBXFileReference section */
 		96A4683029E9399A001F107D /* GreetingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreetingViewModel.swift; sourceTree = "<group>"; };
 		96A4683229E93DEB001F107D /* GreetingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreetingModel.swift; sourceTree = "<group>"; };
+		96A468AC29E9A5D3001F107D /* ItemsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsViewModel.swift; sourceTree = "<group>"; };
+		96A468B029E9AA95001F107D /* ItemsHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsHelper.swift; sourceTree = "<group>"; };
 		96EDFC7029E3DABC00FB89FC /* CoreDataExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreDataExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96EDFC7329E3DABC00FB89FC /* CoreDataExampleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataExampleApp.swift; sourceTree = "<group>"; };
 		96EDFC7529E3DABC00FB89FC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -109,6 +113,8 @@
 			children = (
 				96EDFC7329E3DABC00FB89FC /* CoreDataExampleApp.swift */,
 				96EDFC7529E3DABC00FB89FC /* ContentView.swift */,
+				96A468AC29E9A5D3001F107D /* ItemsViewModel.swift */,
+				96A468B029E9AA95001F107D /* ItemsHelper.swift */,
 				96EDFC7729E3DABD00FB89FC /* Assets.xcassets */,
 				96EDFC7C29E3DABD00FB89FC /* Persistence.swift */,
 				96EDFC8129E3DABD00FB89FC /* Info.plist */,
@@ -276,7 +282,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96A468AD29E9A5D3001F107D /* ItemsViewModel.swift in Sources */,
 				96EDFC7D29E3DABD00FB89FC /* Persistence.swift in Sources */,
+				96A468B129E9AA95001F107D /* ItemsHelper.swift in Sources */,
 				96A4683129E9399A001F107D /* GreetingViewModel.swift in Sources */,
 				96EDFC7629E3DABC00FB89FC /* ContentView.swift in Sources */,
 				96EDFC7429E3DABC00FB89FC /* CoreDataExampleApp.swift in Sources */,
