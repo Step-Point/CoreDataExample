@@ -7,11 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9646AF6F29ED157100229C05 /* EmployeesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9646AF6E29ED157100229C05 /* EmployeesViewModel.swift */; };
+		9646AF7D29ED1F9700229C05 /* EmployeesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9646AF7C29ED1F9700229C05 /* EmployeesView.swift */; };
+		9646AF7F29ED36DE00229C05 /* CompaniesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9646AF7E29ED36DE00229C05 /* CompaniesView.swift */; };
+		9646AF8129ED3B7C00229C05 /* ItemsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9646AF8029ED3B7C00229C05 /* ItemsView.swift */; };
+		9646AF8B29ED420300229C05 /* Company+Employees.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9646AF8A29ED420300229C05 /* Company+Employees.swift */; };
 		96A4683129E9399A001F107D /* GreetingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A4683029E9399A001F107D /* GreetingViewModel.swift */; };
 		96A4683329E93DEB001F107D /* GreetingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A4683229E93DEB001F107D /* GreetingModel.swift */; };
 		96A468AD29E9A5D3001F107D /* ItemsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A468AC29E9A5D3001F107D /* ItemsViewModel.swift */; };
 		96A468B129E9AA95001F107D /* ItemsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A468B029E9AA95001F107D /* ItemsHelper.swift */; };
-		96A468B329E9AC2F001F107D /* CompanyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A468B229E9AC2F001F107D /* CompanyViewModel.swift */; };
+		96A468B329E9AC2F001F107D /* CompaniesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A468B229E9AC2F001F107D /* CompaniesViewModel.swift */; };
 		96EDFC7429E3DABC00FB89FC /* CoreDataExampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96EDFC7329E3DABC00FB89FC /* CoreDataExampleApp.swift */; };
 		96EDFC7629E3DABC00FB89FC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96EDFC7529E3DABC00FB89FC /* ContentView.swift */; };
 		96EDFC7829E3DABD00FB89FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96EDFC7729E3DABD00FB89FC /* Assets.xcassets */; };
@@ -42,11 +47,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9646AF6E29ED157100229C05 /* EmployeesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeesViewModel.swift; sourceTree = "<group>"; };
+		9646AF7C29ED1F9700229C05 /* EmployeesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeesView.swift; sourceTree = "<group>"; };
+		9646AF7E29ED36DE00229C05 /* CompaniesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompaniesView.swift; sourceTree = "<group>"; };
+		9646AF8029ED3B7C00229C05 /* ItemsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsView.swift; sourceTree = "<group>"; };
+		9646AF8A29ED420300229C05 /* Company+Employees.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Company+Employees.swift"; sourceTree = "<group>"; };
 		96A4683029E9399A001F107D /* GreetingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreetingViewModel.swift; sourceTree = "<group>"; };
 		96A4683229E93DEB001F107D /* GreetingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreetingModel.swift; sourceTree = "<group>"; };
 		96A468AC29E9A5D3001F107D /* ItemsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsViewModel.swift; sourceTree = "<group>"; };
 		96A468B029E9AA95001F107D /* ItemsHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsHelper.swift; sourceTree = "<group>"; };
-		96A468B229E9AC2F001F107D /* CompanyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyViewModel.swift; sourceTree = "<group>"; };
+		96A468B229E9AC2F001F107D /* CompaniesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompaniesViewModel.swift; sourceTree = "<group>"; };
 		96EDFC7029E3DABC00FB89FC /* CoreDataExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreDataExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96EDFC7329E3DABC00FB89FC /* CoreDataExampleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataExampleApp.swift; sourceTree = "<group>"; };
 		96EDFC7529E3DABC00FB89FC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -115,9 +125,14 @@
 			children = (
 				96EDFC7329E3DABC00FB89FC /* CoreDataExampleApp.swift */,
 				96EDFC7529E3DABC00FB89FC /* ContentView.swift */,
+				9646AF8029ED3B7C00229C05 /* ItemsView.swift */,
 				96A468AC29E9A5D3001F107D /* ItemsViewModel.swift */,
 				96A468B029E9AA95001F107D /* ItemsHelper.swift */,
-				96A468B229E9AC2F001F107D /* CompanyViewModel.swift */,
+				9646AF7E29ED36DE00229C05 /* CompaniesView.swift */,
+				96A468B229E9AC2F001F107D /* CompaniesViewModel.swift */,
+				9646AF8A29ED420300229C05 /* Company+Employees.swift */,
+				9646AF7C29ED1F9700229C05 /* EmployeesView.swift */,
+				9646AF6E29ED157100229C05 /* EmployeesViewModel.swift */,
 				96EDFCA429E40F1600FB89FC /* GreetingView.swift */,
 				96A4683229E93DEB001F107D /* GreetingModel.swift */,
 				96A4683029E9399A001F107D /* GreetingViewModel.swift */,
@@ -286,14 +301,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				96A468AD29E9A5D3001F107D /* ItemsViewModel.swift in Sources */,
+				9646AF8B29ED420300229C05 /* Company+Employees.swift in Sources */,
 				96EDFC7D29E3DABD00FB89FC /* Persistence.swift in Sources */,
 				96A468B129E9AA95001F107D /* ItemsHelper.swift in Sources */,
 				96A4683129E9399A001F107D /* GreetingViewModel.swift in Sources */,
+				9646AF7D29ED1F9700229C05 /* EmployeesView.swift in Sources */,
 				96EDFC7629E3DABC00FB89FC /* ContentView.swift in Sources */,
 				96EDFC7429E3DABC00FB89FC /* CoreDataExampleApp.swift in Sources */,
 				96EDFCA529E40F1600FB89FC /* GreetingView.swift in Sources */,
 				96A4683329E93DEB001F107D /* GreetingModel.swift in Sources */,
-				96A468B329E9AC2F001F107D /* CompanyViewModel.swift in Sources */,
+				9646AF8129ED3B7C00229C05 /* ItemsView.swift in Sources */,
+				9646AF6F29ED157100229C05 /* EmployeesViewModel.swift in Sources */,
+				9646AF7F29ED36DE00229C05 /* CompaniesView.swift in Sources */,
+				96A468B329E9AC2F001F107D /* CompaniesViewModel.swift in Sources */,
 				96EDFC8029E3DABD00FB89FC /* CoreDataExample.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -8,21 +8,22 @@
 import SwiftUI
 import CoreData
 
-public class CompanyViewModel: ObservableObject {
-    private let viewContext_ = PersistenceController.shared.container.viewContext
+public class CompaniesViewModel: ObservableObject {
+    private let viewContext_: NSManagedObjectContext
     
     @Published private var companies_: [Company]
     
-    public init() {
+    public init(viewContext: NSManagedObjectContext) {
+        self.viewContext_ = viewContext
         self.companies_ = []
-        fetchCompany()
+        fetchCompanies()
     }
     
-    public func GetCompany() -> [Company] {
+    public func GetCompanies() -> [Company] {
         return companies_
     }
     
-    private func fetchCompany() {
+    private func fetchCompanies() {
         let request = NSFetchRequest<Company>(entityName: "Company")
         
         do {
@@ -43,8 +44,7 @@ public class CompanyViewModel: ObservableObject {
         
         do {
             try self.viewContext_.save()
-            fetchCompany()
-            self.objectWillChange.send() // Notify observers of change
+            fetchCompanies()
         } catch {
             // Replace this implementation with code to handle the error appropriately.
             // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.

@@ -8,15 +8,13 @@
 import SwiftUI
 
 @main
-public struct CoreDataExampleApp: App {
-    let persistenceController = PersistenceController.shared
-    
+public struct CoreDataExampleApp: App {    
     public init() {}
 
     public var body: some Scene {
         WindowGroup {
-            let itemsViewModel_ = ItemsViewModel(viewContext: persistenceController.container.viewContext)
-            ContentView(itemsViewModel: itemsViewModel_)
+            let viewContext = PersistenceController.shared.container.viewContext
+            ContentView(viewContext: viewContext)
         }
     }
 }
