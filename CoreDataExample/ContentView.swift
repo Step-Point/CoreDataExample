@@ -18,7 +18,7 @@ public struct ContentView: View {
     public var body: some View {
         NavigationView {
             List {
-                ForEach(self.itemsViewModel_.Items_) { item in
+                ForEach(self.itemsViewModel_.GetItem()) { item in
                     NavigationLink {
                         Text("Item at \(item.timestamp!, formatter: ItemFormatter)")
                     } label: {

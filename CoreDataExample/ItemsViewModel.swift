@@ -11,19 +11,23 @@ import CoreData
 public class ItemsViewModel: ObservableObject {
     private var viewContext_: NSManagedObjectContext
     
-    @Published var Items_: [Item]
+    @Published private var items_: [Item]
     
     public init(viewContext: NSManagedObjectContext) {
         self.viewContext_ = viewContext
-        self.Items_ = []
-        fetchItems()
+        self.items_ = []
+        fetchItem()
     }
     
-    private func fetchItems() {
+    public func GetItem() -> [Item] {
+        return items_
+    }
+    
+    private func fetchItem() {
         let request = NSFetchRequest<Item>(entityName: "Item")
         request.sortDescriptors = [NSSortDescriptor(keyPath: \Item.timestamp, ascending: true)]
         do {
-            Items_ = try viewContext_.fetch(request)
+            items_ = try self.viewContext_.fetch(request)
         } catch {
             // Replace this implementation with code to handle the error appropriately.
             // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
@@ -34,12 +38,13 @@ public class ItemsViewModel: ObservableObject {
     
     func AddItem() {
         withAnimation {
-            let newItem = Item(context: viewContext_)
+            let newItem = Item(context: self.viewContext_)
             newItem.timestamp = Date()
 
             do {
-                try viewContext_.save()
-                fetchItems()
+                try self.viewContext_.save()
+                fetchItem()
+                self.objectWillChange.send() // Notify observers of change
             } catch {
                 // Replace this implementation with code to handle the error appropriately.
                 // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
@@ -51,11 +56,11 @@ public class ItemsViewModel: ObservableObject {
     
     func DeleteItems(offsets: IndexSet) {
         withAnimation {
-            offsets.map { Items_[$0] }.forEach(viewContext_.delete)
+            offsets.map { items_[$0] }.forEach(self.viewContext_.delete)
 
             do {
-                try viewContext_.save()
-                fetchItems()
+                try self.viewContext_.save()
+                fetchItem()
             } catch {
                 // Replace this implementation with code to handle the error appropriately.
                 // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
